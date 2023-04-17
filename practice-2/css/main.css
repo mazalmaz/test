@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+body {
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+.space-between {
+    justify-content: space-between;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #ababab;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__wrap {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 60px 80px;
+    width: 100%;
+    max-width: 754px;
+}
+
+.modal__avatar {
+    position: relative;
+}
+
+.modal__row {
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.modal__row > label {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    font-size: 12px;
+    color: #6a6e72;
+    z-index: 2;
+}
+
+.modal__row > label > span {
+    color: #d90000;
+}
+
+.modal__row:last-child {
+    margin-bottom: 0;
+}
+
+.modal__intro {
+    width: calc(100% - 30px);
+    margin-right: 30px;
+}
+
+.modal__title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 52px;
+}
+
+.modal__input {
+    background: #ffffff;
+    border: 1px solid #d6dade;
+    border-radius: 2px;
+    padding: 22px 16px 8px 16px;
+    width: 100%;
+}
+
+.url {
+    background: url(../img/world.svg) no-repeat calc(100% - 20px) center;
+}
+
+.modal__select {
+    background: #ffffff;
+    border: 1px solid #d6dade;
+    border-radius: 2px;
+    padding: 22px 16px 8px 16px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.modal__select::-ms-expand {
+    display: none;
+}
+
+.modal__sumbit {
+    height: 48px;
+    width: 100%;
+    background: #6326e5;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.modal__sumbit.disabled {
+    cursor: default;
+    opacity: 0.3;
+}
+
+.modal__cancel {
+    color: #0848c0;
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.avatar {
+    width: 163px;
+    height: 163px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ababab;
+    border-radius: 50%;
+    flex-direction: column;
+    cursor: pointer;
+    background-size: cover !important;
+    background-position: center center !important;
+    position: relative;
+}
+
+.avatar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.avatar > input {
+    opacity: 0;
+}
+
+.avatar > span {
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 10px;
+    text-decoration: underline;
+    z-index: 1;
+    position: relative;
+}
+
+.avatar > svg {
+    z-index: 1;
+    position: relative;
+}
+
+.avatar__close {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+
+.select {
+    position: relative;
+}
+
+.select__close {
+    position: absolute;
+    right: 24px;
+    top: calc(50% - 7px);
+    pointer-events: none;
+}
+
+@media (max-width: 720px) {
+    .column-reverse-mobile {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+    .modal__avatar {
+        margin-bottom: 20px;
+    }
+
+    .modal__intro {
+        width: 100%;
+    }
+
+    .modal__wrap {
+        padding: 33px;
+    }
+
+    .modal__title {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-collapse: collapse;
+}
+.table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #efefef;
+    border: 1px solid #dddddd;
+}
+.table td {
+    border: 1px solid #dddddd;
+    padding: 5px;
+}
+
+a.open {
+    color: #fff;
+    text-decoration: none; 
+    user-select: none; 
+    background: #6326e5;
+    border-radius: 4px;
+    padding: 0.7em 1.5em; 
+    outline: none; 
+    display: inline-flex;
+    margin-bottom: 50px;
+}
+a.open:hover {
+    background: rgb(232, 95, 76);
+} 
+
+a.open:active {
+    background: rgb(152, 15, 0);
+} 

@@ -1,0 +1,19 @@
+    const arr = [10, 12, 15, 21];
+
+        arr.forEach(el => {
+            setTimeout(function () {
+                if (el > 13) {
+                    console.log("Good:" + el);
+                } else {
+                    console.log("Bad:" + el);
+                }
+            }, 3000)
+        });
+
+
+
+        arr.filter(function (item) {
+            setTimeout(function () {
+                item > 13 ? console.log("Good:" + item) : console.log("Bad:" + item);
+            }, 3000)
+        });

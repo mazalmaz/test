@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Часть 2 Практика</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <a href="#" class="open">Открыть модальное окно</a>
+    <div class="modal" style="display: none">
+        <div class="modal__wrap">
+            <div class="modal__title">Регистрация</div>
+
+            <div class="modal__row flex space-between column-reverse-mobile">
+
+                <div class="modal__intro">
+                    <div class="modal__row">
+                        <label><span>✱</span> Название организации</label>
+                        <input type="text" class="modal__input required error">
+                    </div>
+
+                    <div class="modal__row">
+                        <label><span>✱</span> Телефон</label>
+                        <input type="text" class="modal__input phone required error ">
+                    </div>
+
+                    <div class="modal__row">
+                        <label><span>✱</span> Email</label>
+                        <input type="email" class="modal__input required error email">
+                    </div>
+                </div>
+
+                <div class="modal__avatar">
+                    <label class="avatar">
+                        <input type="file" class="avatar__file">
+                        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.3327 3.91797C20.3327 2.03319 18.7995 0.5 16.9147 0.5H3.58463C1.69985 0.5 0.166656 2.03319 0.166656 3.91797V17.248C0.166656 19.1328 1.69985 20.666 3.58463 20.666H9.05338V22.9447H11.332V20.666H16.9147C18.7995 20.666 20.3327 19.1328 20.3327 17.248V11.7793H22.5544V9.50065H20.3327V3.91797ZM18.054 17.248C18.054 17.8762 17.5429 18.3874 16.9147 18.3874H3.58463C2.95644 18.3874 2.4453 17.8762 2.4453 17.248V3.91797C2.4453 3.28978 2.95644 2.77865 3.58463 2.77865H16.9147C17.5429 2.77865 18.054 3.28978 18.054 3.91797V17.248ZM27.0547 25.1094H29.3333V27.388C29.3333 28.6464 28.313 29.6667 27.0547 29.6667H24.833V27.388H27.0547V25.1094ZM15.7184 27.388H17.9971V29.6667H15.7184V27.388ZM20.2757 27.388H22.5544V29.6667H20.2757V27.388ZM29.3333 11.7793V14.0579H27.0547V11.7793H24.833V9.50065H27.0547C28.313 9.50065 29.3333 10.5209 29.3333 11.7793ZM27.0547 16.2227H29.3333V18.5013H27.0547V16.2227ZM27.0547 20.666H29.3333V22.9447H27.0547V20.666ZM11.332 27.388H13.5537V29.6667H11.332C10.0736 29.6667 9.05338 28.6464 9.05338 27.388V25.1094H11.332V27.388ZM13.4398 9.27279H15.7184V16.1087H8.88248V13.8301H11.8285L7.7634 9.76501L9.3747 8.15394L13.4398 12.2188V9.27279Z"
+                                fill="white" />
+                        </svg>
+                        <span>
+                            Выберите <br>файл
+                        </span>
+                    </label>
+                    <span class="avatar__close">
+                        <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="18.75" cy="18.25" r="18.0833" fill="white" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M26.2983 12.6584C26.7545 12.2034 26.7545 11.4637 26.2983 11.0087C25.8433 10.5525 25.1048 10.5525 24.6486 11.0087L18.904 16.7534L13.1581 11.0087C12.7031 10.5525 11.9635 10.5525 11.5085 11.0087C11.0523 11.4637 11.0523 12.2034 11.5085 12.6584L17.2531 18.4042L11.5085 24.1489C11.0523 24.605 11.0523 25.3435 11.5085 25.7985C11.9635 26.2547 12.7031 26.2547 13.1581 25.7985L18.904 20.0539L24.6486 25.7985C25.1048 26.2547 25.8433 26.2547 26.2983 25.7985C26.7545 25.3435 26.7545 24.605 26.2983 24.1489L20.5536 18.4042L26.2983 12.6584Z"
+                                fill="#6A6E72" />
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="modal__row">
+                <label><span>✱</span> Деятельность</label>
+                <div class="select">
+                    <span class="select__close">
+                        <svg width="12" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M5.625 4.74112L1.06694 0.183058C0.822865 -0.0610194 0.427135 -0.0610194 0.183058 0.183058C-0.0610199 0.427136 -0.0610199 0.822864 0.183058 1.06694L5.625 6.50888L11.0669 1.06694C11.311 0.822864 11.311 0.427136 11.0669 0.183058C10.8229 -0.0610194 10.4271 -0.0610194 10.1831 0.183058L5.625 4.74112Z"
+                                fill="#6A6E72" />
+                        </svg>
+                    </span>
+                    <select class="modal__select  required">
+                        <option value="Экология">Экология</option>
+                        <option value="Экология">Промышленность</option>
+                        <option value="Экология">Финансы</option>
+
+                    </select>
+                </div>
+
+
+            </div>
+            <div class="modal__row">
+                <label>Ссылка</label>
+                <input type="text" class="modal__input url">
+            </div>
+
+            <div class="modal__row">
+                <input type="sumbit" class="modal__sumbit disabled" disabled value="Зарегистрироваться">
+                <span class="modal__cancel cancel">Отменить</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="out">
+        <table class="table"></table>
+    </div>
+</body>
+
+</html>
