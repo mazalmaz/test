@@ -60,16 +60,13 @@ document.addEventListener("DOMContentLoaded", function () {
         let arr = [];
         let filterArr = [];
         var mask = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
-
         required.forEach((element, index) => {
             if (element.classList.contains("error")) {
                 arr.splice(index, 1, false)
             }
         });
-
         required.forEach((el, index) => {
             el.addEventListener("input", function (e) {
-
                 if (!el.value || (el.classList.contains("phone") && el.value.length < 17) || (el.classList.contains("email") && !mask.test(el.value))) {
                     el.classList.add("error");
                     arr.splice(index, 1, false)
@@ -95,9 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-
-
-
     const fileCheck = function () {
         let file = document.querySelector(".avatar__file"),
             avatar = document.querySelector(".avatar"),
@@ -116,30 +110,19 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     };
 
-
     const getApi = function () {
-
         fetch('https://you-digital.ru/works/posts')
-            .then(response => {
-                
+            .then(response => {   
                 if (response.ok) {
-                    
                     response.json().then(data => {
-                        console.log(data)
                         print(data)
-                        
                     });
                 }
-               
-
             })
             .catch(error => {
                 console.log(error);
             });
-
-
             function print(data) {
-          
                 for(let i = 0; i<data.length;i++) {
                     let tr = `
                       <td>${data[i].userId}</td>
@@ -148,15 +131,9 @@ document.addEventListener("DOMContentLoaded", function () {
                       <td>${data[i].body}</td>                  
                     `;
                     document.querySelector(".table").innerHTML += tr;
-                }
-               
+                } 
             }
-
-
     }
-
-
-
 
     fileCheck();
     inputRequired();
