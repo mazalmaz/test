@@ -42,13 +42,16 @@ document.addEventListener("DOMContentLoaded", function () {
         let cancel = document.querySelector(".cancel");
 
         modal.addEventListener("click", function (e) {
-            if (this === e.target) this.style.display = "none"
+            if (this === e.target) this.style.display = "none";
+            document.body.style.overflow = "auto"
         });
         open.addEventListener("click", function () {
-            modal.style.display = "flex"
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden"
         });
         cancel.addEventListener("click", function () {
-            modal.style.display = "none"
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"
         })
 
     }
@@ -101,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
             file.value = null;
             close.style.display = "none";
             avatar.style.background = "none";
+
         })
 
         file.addEventListener("change", function (e) {

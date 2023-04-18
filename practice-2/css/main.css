@@ -3,7 +3,6 @@
 body {
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
-    position: relative;
 }
 
 .flex {
@@ -14,7 +13,7 @@ body {
 }
 
 .modal {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     right: 0;
@@ -24,6 +23,7 @@ body {
     padding: 15px;
     align-items: center;
     justify-content: center;
+    overflow: auto;
 }
 
 .modal__wrap {
@@ -233,19 +233,19 @@ body {
 
 a.open {
     color: #fff;
-    text-decoration: none; 
-    user-select: none; 
+    text-decoration: none;
+    user-select: none;
     background: #6326e5;
     border-radius: 4px;
-    padding: 0.7em 1.5em; 
-    outline: none; 
+    padding: 0.7em 1.5em;
+    outline: none;
     display: inline-flex;
     margin-bottom: 50px;
 }
 a.open:hover {
     background: rgb(232, 95, 76);
-} 
+}
 
 a.open:active {
     background: rgb(152, 15, 0);
-} 
+}
