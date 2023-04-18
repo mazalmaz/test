@@ -125,6 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (response.ok) {
                     
                     response.json().then(data => {
+                        console.log(data)
                         print(data)
                         
                     });
@@ -141,12 +142,11 @@ document.addEventListener("DOMContentLoaded", function () {
           
                 for(let i = 0; i<data.length;i++) {
                     let tr = `
-                    <tr>
                       <td>${data[i].userId}</td>
                       <td>${data[i].id}</td>
                       <td>${data[i].title}</td>
                       <td>${data[i].body}</td>                  
-                    <tr>`;
+                    `;
                     document.querySelector(".table").innerHTML += tr;
                 }
                
